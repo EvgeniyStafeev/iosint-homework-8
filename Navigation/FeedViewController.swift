@@ -73,7 +73,7 @@ class FeedViewController: UIViewController {
     }
     
     private func labelShow(text: String, color: UIColor) {
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 2) {
             self.labelCheck.text = text
             self.labelCheck.textColor = .black
             self.labelCheck.backgroundColor = color

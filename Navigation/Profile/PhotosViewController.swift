@@ -19,6 +19,7 @@ class PhotosViewController: UIViewController {
     }
     
     var imageProcessor = ImageProcessor()
+
     
     private var imagePublisherFacade = ImagePublisherFacade()
     private var photos = [UIImage]()
@@ -54,8 +55,8 @@ class PhotosViewController: UIViewController {
         setupLayout()
         imagePublisherFacade.subscribe(self)
         imagePublisherFacade.addImagesWithTimer(time: 1, repeat: 20, userImages: photoModel)
-        benchmarkBackgrpundQOS()
-        benchmarkDefaultQOS()
+        //benchmarkBackgrpundQOS()
+        //benchmarkDefaultQOS()
         benchmarkUserInteractiveQOS()
     }
     
@@ -102,7 +103,7 @@ extension PhotosViewController {
          let endTime = Date()
 
          let timeElapsed = endTime.timeIntervalSince(startTime)
-         print("Time elapsed: \(timeElapsed) s for backgroundQOS")
+         print("Time elapsed ЯБЛОКОООО: \(timeElapsed) s for backgroundQOS")
      }
 
      func benchmarkDefaultQOS() {
@@ -121,7 +122,7 @@ extension PhotosViewController {
          let endTime = Date()
 
          let timeElapsed = endTime.timeIntervalSince(startTime)
-         print("Time elapsed: \(timeElapsed) s for defaultQOS")
+         print("Time elapsed ЯБЛОКОООО: \(timeElapsed) s for defaultQOS")
          }
 
      func benchmarkUserInteractiveQOS() {
@@ -140,7 +141,7 @@ extension PhotosViewController {
          let endTime = Date()
 
          let timeElapsed = endTime.timeIntervalSince(startTime)
-         print("Time elapsed: \(timeElapsed) s userInteractiveQOS")
+         print("Time elapsed ЯБЛОКООООО: \(timeElapsed) s userInteractiveQOS")
      }
 
  }
